@@ -100,7 +100,7 @@ Using Numba
 
 The goal of Numba is to compile arbitrarily complex Python code
 on-the-flight and executing it for you.  It is fast, although one should
-take in account the compile times.
+take into account the compile times.
 
 8. Edit poly-numba.py and look at how numba works.
 
@@ -110,12 +110,13 @@ take in account the compile times.
 
    - Raise the amount of data points to 100 millions.  What happens?
 
-   - Set the number of threads for numexpr to 12 and redo the
-     computation.  How its speed compares with numba?
+   - Set the number of threads for numexpr to a large number (8 is a
+     good one for a 4-core CPU) and redo the computation.  How its
+     speed compares with numba?
 
-   - Set the expression to evaluate to the transcendental one (
-     `expr_to_compute = 3`).  How the speeds change?  Why do you think
-     numexpr is faster here?
+   - Set the expression to evaluate to the transcendental one
+     (`expr_to_compute = 3`).  How the different speeds change?  Why
+     do you think numexpr is faster here?
 
    - Provided this, which do you think is the best scenario for numba?
      Which is the best scenario for numexpr?

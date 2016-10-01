@@ -16,12 +16,8 @@ Also, make sure that you have the next Python packages installed:
 * numpy
 * numexpr
 * numba
-* pandas
 * bcolz
-* tables (pytables)
 * matplotlib
-* psutil
-* memory_profiler
 
 I recommend to use Anaconda to install most of the packages above, and for
 the software there that is not in the latest version (e.g. bcolz), use:
