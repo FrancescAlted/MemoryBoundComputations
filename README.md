@@ -13,6 +13,7 @@ $ git clone https://github.com/FrancescAlted/MemoryBoundComputations
 
 Also, make sure that you have the next Python packages installed:
 
+* cython
 * numpy
 * numexpr
 * numba
