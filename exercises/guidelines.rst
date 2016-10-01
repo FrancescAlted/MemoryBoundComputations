@@ -95,7 +95,6 @@ Parallelism with threads
 
    - Could you have a guess at which is the memory bandwidth of this machine?
 
-
 Using Numba
 ===========
 
@@ -120,3 +119,31 @@ take in account the compile times.
 
    - Provided this, which do you think is the best scenario for numba?
      Which is the best scenario for numexpr?
+
+Using compressed data containers
+================================
+
+A compressed data container (e.g. bcolz) allows to store more data
+using the same resources by making use of compression.  Compression
+normally has an overhead over non-compressed data containers
+(e.g. numpy).
+
+9. The query-bcolz.py script builds tables with both numpy and bcolz
+containers and then do a query on them by using different
+computational virtual machines (python, numexpr and dask).
+
+  - Which data container works faster?  With which virtual machine?
+    How much the data can be compressed with the current defaults?
+
+  - How much slow is bcolz (with blosclz compressor) than numpy (with
+    fastest virtual machines)?  Where do you think the overhead comes
+    from?
+
+  - Disable compression completely (clevel = 0) and compare the query
+    times with compression enabled (clevel = 5).  Which is faster?
+    Explain why so.
+
+  - Use other compressors (cname = ['lz4', 'lz4hc', 'zlib', 'zstd'])
+    and determine which works faster.  Which achieves best
+    compression?  Which offers a good balance between speed and
+    compression ratio?
