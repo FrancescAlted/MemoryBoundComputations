@@ -73,7 +73,7 @@ if __name__ == "__main__":
 
     # NumPy raw computation
     time = timeit.timeit('cpu_vs_mem.raw()', 'import cpu_vs_mem', number=1)
-    print('Execution time for raw NumPy calculation: %.2f' % (time,))
+    print('Execution time for raw NumPy calculation: %.3f' % (time,))
 
     # NumPy blocked computation
     blocks, times = bench()
